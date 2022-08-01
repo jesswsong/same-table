@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cloud-tip-modal": "/components/cloudTipModal/index",
+    "selector-component": "plugin://citySelector/selector-component"
+    
+  }
+}
