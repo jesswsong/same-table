@@ -1,9 +1,10 @@
 // index.js
 // const app = getApp()
 const { envList } = require('../../envList.js');
-const citySelector = requirePlugin('citySelector');
+//const citySelector = requirePlugin('citySelector');
 Page({
 
+  /*
   // 从城市选择器插件返回后，在页面的onShow生命周期函数中能够调用插件接口，获取cityInfo结果对象
   onShow() {
     const selectedCity = citySelector.getCity(); // 选择城市后返回城市信息对象，若未选择返回null
@@ -11,9 +12,18 @@ Page({
   onUnload () {
     // 页面卸载时清空插件数据，防止再次进入页面，getCity返回的是上次的结果
     citySelector.clearCity();
-     },
+     }, 
+  // 当用户选择了组件中的城市之后的回调函数
+  onSelectCity(e) {
+    const { province, city } = e.detail;
+    this.setData({
+      selectedProvince: province,
+      selectedCity: city,
+    });
+  },
+     */
 
-  /*data: {
+  data: {
     showUploadTip: false,
     powerList: [{
       title: '云函数',
@@ -22,17 +32,33 @@ Page({
       item: [{
         title: '获取OpenId',
         page: 'getOpenId'
-      },
+        },
       //  {
       //   title: '微信支付'
       // },
-       {
+        {
         title: '生成小程序码',
         page: 'getMiniProgramCode'
-      },
+        },
       // {
       //   title: '发送订阅消息',
       // }
+        {
+          title: '测试',
+          page: 'testPage',
+          powerList: [{
+            title: '子目录',
+            item: [{
+              title: '用户1',
+            },
+
+            {
+              title: '用户2',
+            }
+              
+            ]
+          },]
+        },
     ]
     }, {
       title: '数据库',
@@ -71,13 +97,14 @@ Page({
     envList,
     selectedEnv: envList[0],
     haveCreateCollection: false
-  }, */
+  }, 
 
+  /*
   data: {
     selectorVisible: true,
     selectedProvince: null,
     selectedCity: null,
-  },
+  },*/
 
   // 显示组件
   showSelector() {
@@ -86,14 +113,7 @@ Page({
     });
   },
 
-  // 当用户选择了组件中的城市之后的回调函数
-  onSelectCity(e) {
-    const { province, city } = e.detail;
-    this.setData({
-      selectedProvince: province,
-      selectedCity: city,
-    });
-  },
+  
   onClickPowerInfo(e) {
     const index = e.currentTarget.dataset.index;
     const powerList = this.data.powerList;

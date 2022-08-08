@@ -8,14 +8,15 @@
 
   <view class="top_tip">免鉴权接口调用 免部署后台 高并发</view>
 
+ 
   <!-- key、referer和hotCitys通过组件的属性传入 -->
-  <selector-component
+ <!-- <selector-component
     show="{{selectorVisible}}"
     key="M2WBZ-FULL3-HOS36-3WHFY-NOWQH-NTFS4"
     referer="拼桌桌"
     hotCitys=""
     bindselect="onSelectCity"
-  ></selector-component>
+  ></selector-component> -->
 
   <view class="power" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
     <view class="power_info" data-index="{{index}}" bindtap="onClickPowerInfo">

@@ -1,0 +1,14 @@
+<view>
+  <view class="print"> 这是一个测试界面 </view>
+  <view role="option" aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image mode="aspectFill" src="pfp.png" alt="">
+                    <span id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</span> 
+                    </image>
+                </view>
+                <view class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
+                    <text>联系人名称</text>
+                    <view class="demo_badge_desc">摘要信息</view>
+                </view>
+            </view>
+</view>

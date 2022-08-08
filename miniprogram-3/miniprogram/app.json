@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/getOpenId/index",
     "pages/getMiniProgramCode/index",
+    "pages/testPage/index", 
     "pages/deployService/index",
     "pages/createCollection/index",
     "pages/uploadFile/index",

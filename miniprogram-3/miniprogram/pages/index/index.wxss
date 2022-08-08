@@ -44,7 +44,7 @@ page {
 }
 
 .power_info_less {
-  width: 30rpx;
+  width: 50rpx;
   height: 30rpx;
   transform: rotate(270deg);
 }

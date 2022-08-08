@@ -3,8 +3,9 @@ App({
   onLaunch: function () {
   
 
-    //this.globalData = {};
-    this.goMap();
+    this.globalData = {};
+    this.goCloud();
+    //this.goMap();
   },
 
   
